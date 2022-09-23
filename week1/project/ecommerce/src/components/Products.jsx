@@ -2,13 +2,13 @@ import React from 'react'
 import OneProduct from './OneProduct'
 import productsList from '../fake-data/all-products'
 
-export default function Products({ catType }) {
-  let tempProducts = productsList.filter(item => item.category === catType)
+export default function Products({ categoryName }) {
+  const tempProducts = productsList.filter(item => item.category === categoryName)
   return (
     <>
       <div className='cards'>
         {
-          catType ?
+          categoryName ?
             <>
               {
                 tempProducts.map((item) => {

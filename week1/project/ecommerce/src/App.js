@@ -4,10 +4,10 @@ import Categories from './components/Categories'
 import Products from './components/Products'
 
 function App() {
-  const [catType, setCatType]= useState('')
+  const [categoryName , setCategoryName ]= useState('')
   const [category, setCategory] = useState(null);
   const handlecategory = (item)=>{
-  setCatType(item.slice(6))
+  setCategoryName (item.slice(6))
   setCategory(item)
 }
   return ( <div>
@@ -16,7 +16,7 @@ function App() {
     </div>
     <div className='container' >
      <Categories handlecategory ={handlecategory} category={category}></Categories>
-     <Products catType ={catType}></Products>
+     <Products categoryName  ={categoryName }></Products>
     </div>
     </div>
   );
