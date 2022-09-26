@@ -4,10 +4,8 @@ import Categories from './components/Categories'
 import Products from './components/Products'
 
 function App() {
-  const [categoryName , setCategoryName ]= useState('')
-  const [category, setCategory] = useState(null);
+  const [category, setCategory] = useState('');
   const handlecategory = (item)=>{
-  setCategoryName (item.slice(6))
   setCategory(item)
 }
   return ( <div>
@@ -16,7 +14,7 @@ function App() {
     </div>
     <div className='container' >
      <Categories handlecategory ={handlecategory} category={category}></Categories>
-     <Products categoryName  ={categoryName }></Products>
+     <Products categoryName  ={category.slice(6)}></Products>
     </div>
     </div>
   );
