@@ -1,28 +1,18 @@
 import React from 'react'
-import OneProduct from './OneProduct'
+import OneProduct from './Product'
 
-export default function Products({ category  ,productsList,isLoading}) {
+export default function Products({ category, productsList, isLoading }) {
   return (
-    <>
       <div className='cards'>
-        {isLoading ? 'Loading' : category  ?
-            <>
-              {
-                productsList.map((item) => {
-                  return <OneProduct key={item.id} item={item}  />
-                })
-              }
-            </>
-            :
-            <>
-              {
-                productsList.map((item) => {
-                  return <OneProduct key={item.id} item={item} />
-                })
-              }
-            </>
+        {isLoading ? 'Loading' :
+          <>
+            {
+              productsList.map((item) => {
+                return <OneProduct key={item.id} item={item} />
+              })
+            }
+          </>
         }
       </div>
-    </>
   )
 }
