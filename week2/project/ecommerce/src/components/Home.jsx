@@ -31,10 +31,10 @@ export default function Home() {
         async function fetchProducts() {
             try {
                 const response = await fetch(
-                    'https://fakestoreapi.com/products'
+                    category? `https://fakestoreapi.com/products/category/${category}`:'https://fakestoreapi.com/products'
                 );
                 const data = await response.json();
-                category ? setProductsList(data.filter(item => item.category === category)) : setProductsList(data);
+                 setProductsList(data);
                 setError(false)
             } catch (error) {
                 setError(true)
