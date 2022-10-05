@@ -1,16 +1,17 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import {Link } from 'react-router-dom'
+import { catrgoryContext } from './context/ContextCategory'
 export default function Header({title}) {
+    const { setCategory } = useContext(catrgoryContext)
     return (
      <div className='header'>
                 <div >
                     <h1>{title}</h1>
                 </div>
                 <div className='header--nav'>
-                    <Link className='nav-link' to="/">Products</Link>
+                    <Link className='nav-link' to="/" onClick={() => setCategory('')}>Products</Link>
                     <Link  className='nav-link' to="/favourites">Favourites</Link>
                 </div>
             </div>
-        
   )
 }
