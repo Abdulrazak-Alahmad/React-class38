@@ -7,7 +7,7 @@ export default function Product({ item }) {
   const { title, image, description, id } = item
   const { favouritesIds, addFavouriteId, deleteFavouriteId } = useContext(FavouritesContext)
   return (
-    <div className='one--item asdfg'>
+    <div className='one--item'>
       <button className='favouriteIcon'
         onClick={
           favouritesIds.some((item) => item === id)
