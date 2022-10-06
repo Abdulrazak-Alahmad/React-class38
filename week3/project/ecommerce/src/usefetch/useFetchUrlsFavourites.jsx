@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-
 const useFetchUrlsFavourites = (urls) => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(false)
+    
     useEffect(() => {
         const fetchData = async () => {
             try {

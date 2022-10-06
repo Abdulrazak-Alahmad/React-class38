@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'
-import useFetch from '../usefetch/useFetch';
-export default function OneProductDetails(productsList) {
+import { RotatingLines } from 'react-loader-spinner'
+import useFetch from '../../usefetch/useFetch';
+export default function ProductDetails() {
     const { productId } = useParams()
     const product = useFetch(`https://fakestoreapi.com/products/${productId}`, [productId])
 
@@ -11,7 +12,13 @@ export default function OneProductDetails(productsList) {
                 product.error
                     ?
                     <h1>Something went wrong.</h1>
-                    : product.isLoading ? 'Loading' :
+                    : product.isLoading ? <RotatingLines
+                        strokeColor="grey"
+                        strokeWidth="5"
+                        animationDuration="0.75"
+                        width="66"
+                        visible={true}
+                    /> :
                         <>
                             <h1>{product.data.title}</h1>
                             <div className='product--details'>

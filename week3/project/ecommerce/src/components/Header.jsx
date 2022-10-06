@@ -1,8 +1,8 @@
 import React,{useContext} from 'react'
 import {Link } from 'react-router-dom'
-import { catrgoryContext } from './context/ContextCategory'
+import { CatrgoryContext } from '../context/ContextCategory'
 export default function Header({title}) {
-    const { setCategory } = useContext(catrgoryContext)
+    const { setCategory } = useContext(CatrgoryContext)
     return (
      <div className='header'>
                 <div >

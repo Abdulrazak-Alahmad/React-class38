@@ -4,8 +4,8 @@ import ProductDetails from './components/product/ProductDetails'
 import Home from './components/Home'
 import Favourites from './components/Favourites'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { FavouritesContextProvider } from './components/context/ContextFavourite'
-import { CategoryContextProvider } from './components/context/ContextCategory'
+import { FavouritesContextProvider } from './context/ContextFavourite'
+import { CategoryContextProvider } from './context/ContextCategory'
 
 function App() {
   return (

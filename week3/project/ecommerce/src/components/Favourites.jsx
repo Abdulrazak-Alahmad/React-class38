@@ -1,16 +1,23 @@
 import React, { useContext } from 'react'
-import { favouritesContext } from './context/ContextFavourite'
+import { FavouritesContext } from '../context/ContextFavourite'
 import Products from './product/Products'
 import Header from './Header'
-import useFetchUrlsFavourites from './usefetch/useFetchUrlsFavourites'
+import { RotatingLines } from 'react-loader-spinner'
+import useFetchUrlsFavourites from '../usefetch/useFetchUrlsFavourites'
 export default function Favourites({ title }) {
-    const { urlsFavourites } = useContext(favouritesContext)
+    const { urlsFavourites } = useContext(FavouritesContext)
     const { data, isLoading, error } = useFetchUrlsFavourites(urlsFavourites)
     return (
         <div>
-            <Header title={title}/>
+            <Header title={title} />
             {isLoading ?
-                'Loading'
+                <RotatingLines
+                    strokeColor="grey"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    width="66"
+                    visible={true}
+                />
                 :
                 error ?
                     <h1>Something went wrong.</h1>
