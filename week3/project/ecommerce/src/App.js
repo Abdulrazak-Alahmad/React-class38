@@ -10,7 +10,7 @@ import { CategoryContextProvider } from './context/ContextCategory'
 function App() {
   return (
     <Router>
-      < FavouritesContextProvider>
+      <FavouritesContextProvider>
         <CategoryContextProvider>
           <Routes>
             <Route path='/' element={<Home title='Products' />} />
@@ -18,7 +18,7 @@ function App() {
             <Route path='/product/:productId' element={<ProductDetails />} />
           </Routes>
         </CategoryContextProvider>
-      </ FavouritesContextProvider>
+      </FavouritesContextProvider>
     </Router>
   );
 }
