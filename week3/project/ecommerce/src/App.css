@@ -1,13 +1,16 @@
 .App {
   text-align: center;
 }
-.header{
+
+.header {
   display: flex;
   justify-content: space-between;
 }
-.header--nav{
+
+.header--nav {
   margin-top: 33px;
 }
+
 .nav-link {
   margin: 0px 4px;
 }
@@ -28,6 +31,7 @@
 .categories {
   display: flex;
 }
+
 .categories--item {
   background-color: #efeff0;
   cursor: pointer;
@@ -36,45 +40,50 @@
   padding: 12px;
   font-size: 16px;
 }
+
 .categories--item-selected {
   background-color: #bdbdc1;
 }
 
-.product--title--div{
+.product--title--div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 300px;
 }
+
 .product--title {
   padding-top: 8px;
   font-size: 12px;
 }
+
 .product--image {
   grid-area: imageUp;
 }
-.product--details{
+
+.product--details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: ". imageUp ";
 }
-.product--description{
+
+.product--description {
   display: flex;
   align-items: center;
 }
 
-.one--item{
+.one--item {
   position: relative;
 }
 
-.favouriteIcon{
-    height: 40px;
-    width: 40px;
-    position: absolute; 
-    right: 0px;
-    top : 20px;
-    background-color: Transparent;
-    border: none;
+.favouriteIcon {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  background-color: Transparent;
+  border: none;
 }
 
 .image {
@@ -95,16 +104,19 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 @media only screen and (max-width: 1000px) {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media only screen and (max-width: 600px) {
   .cards {
     grid-template-columns: 1fr;
   }
-  .product--details{
+
+  .product--details {
     grid-template-columns: 1fr;
     grid-template-areas: "imageUp ";
   }

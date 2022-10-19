@@ -1,7 +1,9 @@
 import React from 'react'
 import OneProduct from './Product'
 import { RotatingLines } from 'react-loader-spinner'
+
 export default function Products({ productsList, isLoading }) {
+
   return (
     <div className='cards'>
       {isLoading ? <RotatingLines

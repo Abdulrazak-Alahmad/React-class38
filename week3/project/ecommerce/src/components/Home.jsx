@@ -5,6 +5,7 @@ import Header from './Header'
 import useFetch from '../usefetch/useFetch';
 import { CatrgoryContext } from '../context/ContextCategory'
 import { RotatingLines } from 'react-loader-spinner'
+
 export default function Home({ title }) {
     const { category } = useContext(CatrgoryContext)
     const categoryList = useFetch('https://fakestoreapi.com/products/categories', [])

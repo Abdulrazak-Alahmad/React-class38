@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react'
-export const FavouritesContext = createContext()
 
+export const FavouritesContext = createContext()
 export const FavouritesContextProvider = ({ children }) => {
     const [favouritesIds, setFavouritesIds] = useState([])
     const [urlsFavourites, setUrlsFavourites] = useState(
@@ -20,9 +20,8 @@ export const FavouritesContextProvider = ({ children }) => {
         setFavouritesIds(favouritesIds.filter((item) => item !== id));
     };
 
-    const value = { favouritesIds, setFavouritesIds, addFavouriteId, deleteFavouriteId, urlsFavourites }
     return (
-        <FavouritesContext.Provider value={value}>
+        <FavouritesContext.Provider value={{ favouritesIds, setFavouritesIds, addFavouriteId, deleteFavouriteId, urlsFavourites }}>
             {children}
         </FavouritesContext.Provider>
     )

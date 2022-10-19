@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import { FavouritesContext } from '../../context/ContextFavourite'
 import heartRegular from '../../assets/heart-regular.svg'
 import heartSolid from '../../assets/heart-solid.svg'
+
 export default function Product({ item }) {
   const { title, image, description, id } = item
   const { favouritesIds, addFavouriteId, deleteFavouriteId } = useContext(FavouritesContext)
+
   return (
     <div className='one--item'>
       <button className='favouriteIcon'

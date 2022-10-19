@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+
 export default function useFetch(url, condition) {
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(false)
@@ -19,6 +20,7 @@ export default function useFetch(url, condition) {
         };
         fetchData();
     }, condition)
+
     return (
         { data, error, isLoading }
     )

@@ -4,9 +4,11 @@ import Products from './product/Products'
 import Header from './Header'
 import { RotatingLines } from 'react-loader-spinner'
 import useFetchUrlsFavourites from '../usefetch/useFetchUrlsFavourites'
+
 export default function Favourites({ title }) {
     const { urlsFavourites } = useContext(FavouritesContext)
     const { data, isLoading, error } = useFetchUrlsFavourites(urlsFavourites)
+
     return (
         <div>
             <Header title={title} />

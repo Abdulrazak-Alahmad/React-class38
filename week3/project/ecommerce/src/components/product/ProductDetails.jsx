@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom'
 import { RotatingLines } from 'react-loader-spinner'
 import useFetch from '../../usefetch/useFetch';
+
 export default function ProductDetails() {
     const { productId } = useParams()
     const product = useFetch(`https://fakestoreapi.com/products/${productId}`, [productId])

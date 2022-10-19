@@ -8,6 +8,7 @@ import { FavouritesContextProvider } from './context/ContextFavourite'
 import { CategoryContextProvider } from './context/ContextCategory'
 
 function App() {
+
   return (
     <Router>
       <FavouritesContextProvider>
